@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApp1.Models
 {
@@ -9,6 +10,8 @@ namespace WebApp1.Models
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
+        [DisplayName("Display order of category")]
+        [Range(1, 100)]
         public int DisplayOrder { get; set; }
     }
 }
